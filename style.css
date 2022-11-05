@@ -1,0 +1,563 @@
+:root {
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2, 12, 27, 0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --outer-space: #041424;
+    --outer-space-ast: #092138;
+
+    --color-bg: #1f1f38;
+    --color-bg-variant: #2c2c6c;
+    --color-primary: #4db5ff;
+    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.6);
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+
+    --transition: all 300ms ease;
+}
+
+/* ===========> SCROLLBAR <=========== */
+
+::-webkit-scrollbar-track {
+    background: var(--outer-space);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: #0a192f;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #233554;
+    border: 3px solid #0a192f;
+    border-radius: 10px;
+}
+
+/* ===========> DEFAULT <=========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: 0;
+    list-style: none;
+}
+
+body,
+html {
+    min-height: 100vh;
+    background-color: var(--outer-space);
+}
+
+a {
+    text-decoration: none;
+}
+
+.parallax {
+    position: sticky;
+}
+
+/* ===========> HEADER <=========== */
+
+header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    z-index: 10000;
+    justify-content: space-around;
+    padding-top: 4rem;
+    gap: 10rem;
+    transition: var(--transition);
+}
+
+/* ===========> NAVBAR <=========== */
+
+nav {
+    background: rgba(0, 0, 0, 0.3);
+    width: max-content;
+    padding: 0.7rem 1.7rem;
+    right: 12.5%;
+    top: 3rem;
+    /* transform: translateX(-50%);
+    bottom: 2rem; */
+    display: flex;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
+}
+
+nav a {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--color-light);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+nav a.active {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+/* ===========> LOGO <=========== */
+a.logo {
+    width: max-content;
+}
+
+a.logo>img {
+    width: 8.5vw;
+}
+
+span.boi {
+    color: rgb(207, 106, 106);
+}
+
+/* ===========> FREEPIK CREDIT <=========== */
+
+a.freepik {
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.7em;
+    font-weight: 500;
+    padding: 7px 30px;
+    color: var(--light-navy);
+    background: var(--lightest-slate);
+    border-radius: 40px;
+    left: 9%;
+    top: 90%;
+    z-index: 11;
+    opacity: 0.8;
+}
+
+a.freepik-1 {
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.7em;
+    font-weight: 500;
+    padding: 7px 30px;
+    color: var(--light-navy);
+    background: var(--lightest-slate);
+    border-radius: 40px;
+    left: 8%;
+    top: 95%;
+    z-index: 11;
+    opacity: 0.8;
+}
+
+/* ===========> SECTION HOME <=========== */
+
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#home img {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#home>h1#title {
+    position: absolute;
+    font-size: 4em;
+    font-weight: 600;
+    color: var(--light-slate);
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+#home h2#desc {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--slate);
+    margin-top: 6.5rem;
+}
+
+#home>a#btn {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: 7px 30px;
+    color: var(--light-navy);
+    background: var(--lightest-slate);
+    border-radius: 1.5rem;
+    z-index: 11;
+    margin-top: 12rem;
+    transition: var(--transition);
+}
+
+
+/* ===========> IMG PLANET <=========== */
+
+#home img#planet {
+    filter: drop-shadow(8px 8px 50px rgb(56, 151, 56));
+    opacity: 0.75;
+    z-index: 10;
+}
+
+
+#home img#planet1 {
+    position: absolute;
+    filter: drop-shadow(30px 8px 76px rgb(192, 114, 41));
+    z-index: 10;
+}
+
+#home img#planet_home {
+    position: absolute;
+    image-rendering: auto;
+    filter: drop-shadow(8px 0px 50px skyblue);
+    z-index: 10;
+}
+
+/* ===========> IMG BINTANG <=========== */
+
+#home img#bintang {
+    position: absolute;
+    mix-blend-mode: screen;
+    image-rendering: auto;
+    z-index: 9;
+}
+
+/* ===========> IMG ASTRONOT <=========== */
+
+#home img#astronout {
+    position: absolute;
+    top: 0;
+    filter: drop-shadow(8px 0px 50px #194064);
+    opacity: 0.8;
+    z-index: 10;
+    transition: all 100ms ease-out;
+}
+
+/* ===========> WAVES <=========== */
+
+svg.waves {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    top: -10vh;
+    /*Fix for safari gap*/
+    min-height: 50px;
+    max-height: 100px;
+}
+
+svg.waves-1 {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    /*Fix for safari gap*/
+    min-height: 50px;
+    max-height: 100px;
+    transform: scaleY(-1);
+}
+
+.waves__container {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
+}
+
+.plx>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.plx>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.plx>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.plx>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.plx>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/* ===========> SECTION ABOUT <=========== */
+
+section#about {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 500;
+    color: var(--light-slate);
+    width: 100%;
+    height: 100vh;
+    padding-top: 10rem;
+    background-image: url(/img/wallpaperAbout.jpg);
+    background-size: cover;
+    background-color: var(--outer-space);
+}
+
+section#about>img.z3rsaM67 {
+    max-width: 9rem;
+    border-radius: 10rem;
+    margin-bottom: 0.7rem;
+    border: 0.2rem solid var(--green);
+}
+
+section#about>a.nama {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+section#about>a.nama:hover {
+    color: var(--green);
+}
+
+/* ===========> Link Tree <=========== */
+
+.link__tree {
+    margin-top: 2rem;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link__tree a:hover {
+    color: var(--green);
+}
+
+.a__tree {
+    display: flex;
+    position: relative;
+    width: 40rem;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+    padding: 1.3rem 2rem;
+    border-radius: 4rem;
+    color: var(--light-slate);
+    box-shadow: 10px 10px 5px 0px rgba(9, 33, 56, 0.75);
+}
+
+.a__tree h5 {
+    font-size: 1.2rem;
+}
+
+.a__tree>i {
+    position: absolute;
+    left: 5%;
+    width: max-content;
+    font-size: 1.8rem;
+}
+
+/* ===========> Social Links <=========== */
+
+.social__links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.social__links a:hover {
+    color: var(--green);
+}
+
+.a__social {
+    color: var(--light-slate);
+    font-size: 1.5rem;
+    width: max-content;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 1.5rem;
+    border-radius: 3rem;
+}
+
+/* ===========> FOOTER <=========== */
+
+footer {
+    background-color: var(--dark-navy);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    color: var(--green);
+}
+
+.credit>h5 {
+    font-size: 0.9rem;
+}
+
+.credit>h5.text__credit>a {
+    color: var(--green);
+    text-decoration: underline;
+}
+
+.credit>h5.text__credit>a:hover {
+    color: var(--lightest-navy);
+}
+
+/* ===========> Medium Device <=========== */
+
+@media only screen and (max-width: 1024px) {
+
+    /* ===========> HEADER <=========== */
+    a.freepik,
+    a.freepik-1 {
+        display: none;
+    }
+
+    nav {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 87.5%;
+    }
+
+    .parallax {
+        position: absolute;
+    }
+
+    header {
+        justify-content: space-between;
+        margin-left: 5rem;
+    }
+
+    /* ===========> WAVES <=========== */
+
+    svg.waves {
+        top: -6vh;
+    }
+
+}
+
+/* ===========> Small Device <=========== */
+
+@media only screen and (max-width: 600px) {
+
+    /* ===========> HEADER <=========== */
+    a.logo {
+        display: none;
+    }
+
+    a.freepik,
+    a.freepik-1 {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 82.5%;
+    }
+
+    .parallax {
+        position: absolute;
+    }
+
+    #astronout {
+        position: absolute;
+    }
+
+    #home>img#bintang {
+        top: -2rem;
+    }
+
+    /* ===========> Waves <=========== */
+
+    svg.waves,
+    svg.waves-1 {
+        height: 10vh;
+    }
+
+    svg.waves {
+        top: -5vh;
+    }
+
+    /* ===========> Link Tree <=========== */
+
+    .a__tree {
+        width: 95vw;
+    }
+
+    .a__tree>i {
+        left: 7.5%;
+    }
+
+    .link__tree {
+        width: max-content;
+    }
+
+    /* ===========> Social Links <=========== */
+
+    .social__links {
+        display: block;
+    }
+
+    /* ===========> SECTION ABOUT <=========== */
+
+    section#about {
+        padding-top: 6rem;
+        background-image: url(/img/wallpaperAboutMobile.jpg);
+    }
+
+    section#about>a.nama {
+        color: var(--light-slate);
+    }
+
+    footer {
+        height: 7.5vh;
+    }
+}
