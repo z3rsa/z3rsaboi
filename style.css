@@ -105,6 +105,8 @@ nav a {
     padding: 0.9rem;
     border-radius: 50%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     color: var(--color-light);
     font-size: 1rem;
     cursor: pointer;
@@ -117,6 +119,18 @@ nav a:hover {
 nav a.active {
     background: var(--color-primary);
     color: var(--color-bg);
+}
+
+.btn__portfolio {
+    color: var(--light-slate);
+    background: rgba(2, 12, 27, 0.5);
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+.btn__portfolio:hover {
+    color: var(--green);
+    background: var(--navy);
 }
 
 /* ===========> LOGO <=========== */
@@ -343,7 +357,7 @@ section#about {
     color: var(--light-slate);
     width: 100%;
     height: 100vh;
-    padding-top: 10rem;
+    padding-top: 20vh;
     background-image: url(/img/wallpaperAbout.jpg);
     background-size: cover;
     background-color: var(--outer-space);
