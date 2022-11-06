@@ -99,7 +99,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 2000);
 
     setTimeout(() => {
-        splash.style.left = '100vw';
+        splash.style.top = '-100vh';
         bodySplash.classList.add('overflow-temp');
     }, 2300)
 });
