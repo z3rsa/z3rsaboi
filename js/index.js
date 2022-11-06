@@ -78,18 +78,19 @@ for (var i = 0; i < nav_a.length; i++) {
 
 // ===========> Splash Screen
 let splash = document.querySelector('.splash__screen');
-let logo = document.querySelectorAll('.splash')
+let splash_container = document.querySelector('splash__container');
+let logo = document.querySelectorAll('.splash');
 let bodySplash = document.querySelector('body');
 
 window.addEventListener('DOMContentLoaded', () => {
     logo.forEach((logo, idx) => {
         setTimeout(() => {
             logo.classList.add('active');
-        }, (idx + 1) * 400);
-    })
+        }, (idx + 1) * 400)
+    });
 
     setTimeout(() => {
-        logo.forEach((span, idx) => {
+        logo.forEach((logo, idx) => {
             setTimeout(() => {
                 logo.classList.remove('active');
                 logo.classList.add('fade');
