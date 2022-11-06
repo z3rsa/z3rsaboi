@@ -63,6 +63,8 @@ if (window.screen.width > 600) {
 
 }
 
+// ===========> Nav Active
+
 var navActive = document.getElementsByTagName("nav");
 var nav_a = document.getElementsByClassName("a");
 
@@ -73,3 +75,30 @@ for (var i = 0; i < nav_a.length; i++) {
         this.className += " active";
     });
 }
+
+// ===========> Splash Screen
+let splash = document.querySelector('.splash__screen');
+let logo = document.querySelectorAll('.splash')
+let bodySplash = document.querySelector('body');
+
+window.addEventListener('DOMContentLoaded', () => {
+    logo.forEach((logo, idx) => {
+        setTimeout(() => {
+            logo.classList.add('active');
+        }, (idx + 1) * 400);
+    })
+
+    setTimeout(() => {
+        logo.forEach((span, idx) => {
+            setTimeout(() => {
+                logo.classList.remove('active');
+                logo.classList.add('fade');
+            }, (idx + 1) * 50)
+        })
+    }, 2000);
+
+    setTimeout(() => {
+        splash.style.left = '100vw';
+        bodySplash.classList.add('overflow-temp');
+    }, 2300)
+});
